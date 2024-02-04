@@ -8,12 +8,17 @@ body {
     position:fixed;
     top: 0;
     left: 0;
-    filter: grayscale() ;
+    filter: grayscale();
     opacity: 20%;
     width: 100%;
     z-index: -1;
     overflow: hidden;
-    -webkit-mask-image: -webkit-gradient(linear, left top,left bottom,  from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    -webkit-mask-image: linear-gradient(rgb(0 0 0 / 100%), transparent);
+}
+@-moz-document url-prefix(){
+    .venue-video{
+        filter: grayscale() brightness(0.1);
+    }
 }
 div.weddingCouple.coupleShared, div.save-the-date {
     margin-top: -5%;
